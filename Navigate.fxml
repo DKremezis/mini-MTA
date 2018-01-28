@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import org.controlsfx.control.textfield.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.NavigateController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="24.0" prefWidth="800.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#refresh" text="New" />
+                  <MenuItem mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="View">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#createTrainInfoScene" text="Train Info" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openHowPopUp" text="Navigate Manual" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ListView fx:id="fromLV" layoutX="14.0" layoutY="66.0" onMouseClicked="#boroughSelectedFrom" prefHeight="159.0" prefWidth="95.0" />
+      <ListView fx:id="toLV" layoutX="117.0" layoutY="66.0" onMouseClicked="#boroughSelectedTo" prefHeight="159.0" prefWidth="95.0" />
+      <ChoiceBox fx:id="fromCB" layoutX="14.0" layoutY="236.0" onMouseClicked="#clickOnFromCB" prefHeight="22.0" prefWidth="95.0" />
+      <ChoiceBox fx:id="toCB" layoutX="117.0" layoutY="236.0" onMouseClicked="#clickOnToCB" prefHeight="22.0" prefWidth="95.0" />
+      <TextField fx:id="fromTF" layoutX="14.0" layoutY="278.0" onKeyPressed="#pressedEnterOnTextField" onMouseClicked="#mouseOnTextField" onMouseDragEntered="#mouseOnTextField" prefHeight="22.0" prefWidth="95.0" promptText="Station name" />
+      <TextField fx:id="toTF" layoutX="117.0" layoutY="278.0" onKeyPressed="#pressedEnterOnTextField" onMouseClicked="#mouseOnTextField" prefHeight="22.0" prefWidth="95.0" promptText="Station name" />
+      <TextArea fx:id="fromSelected" editable="false" layoutX="256.0" layoutY="65.0" prefHeight="24.0" prefWidth="139.0" />
+      <TextArea fx:id="toSelected" editable="false" layoutX="429.0" layoutY="65.0" prefHeight="24.0" prefWidth="139.0" />
+      <Label layoutX="49.0" layoutY="47.0" text="FROM" />
+      <Label layoutX="152.0" layoutY="47.0" text="TO" />
+      <Label layoutX="403.0" layoutY="70.0" text="--&gt;" />
+      <TextArea fx:id="resultTA" editable="false" layoutX="255.0" layoutY="142.0" prefHeight="212.0" prefWidth="313.0" />
+      <Button layoutX="14.0" layoutY="306.0" mnemonicParsing="false" onAction="#selectedStationTextFieldBox" prefHeight="22.0" prefWidth="197.0" text="ENTER" />
+      <Button layoutX="14.0" layoutY="330.0" mnemonicParsing="false" onAction="#pressBack" prefHeight="22.0" prefWidth="197.0" text="BACK TO MAIN MENU" />
+      <Button layoutX="256.0" layoutY="98.0" mnemonicParsing="false" onAction="#openMapPopUp" prefHeight="0.0" prefWidth="139.0" text="FIND IN MAP (F2)" />
+      <Button layoutX="429.0" layoutY="98.0" mnemonicParsing="false" onAction="#openMapPopUp" prefHeight="22.0" prefWidth="139.0" text="FIND IN MAP (F2)" />
+      <Label layoutX="311.0" layoutY="47.0" text="FROM" />
+      <Label layoutX="491.0" layoutY="47.0" text="TO" />
+      <Button fx:id="navigateBttn" layoutX="255.0" layoutY="124.0" mnemonicParsing="false" onAction="#pressNavigate" prefHeight="22.0" prefWidth="313.0" text="NAVIGATE" />
+   </children>
+</AnchorPane>

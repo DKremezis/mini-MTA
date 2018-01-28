@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="popUpPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="394.0" prefWidth="227.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.popManualController">
+   <children>
+      <TextArea editable="false" layoutX="14.0" layoutY="14.0" prefHeight="320.0" prefWidth="200.0" text="There are two ways to pick your &#10;starting point and destination:&#10;&#10;1. Use the choices from the box&#10;to select the boroughs for &quot;from&quot; and&#10;&quot;to&quot;. Once you do the boxes below &#10;will show the station available from&#10;the borough you selected. Hit the &#10;&quot;-&gt;&quot; button once your done and &#10;&quot;navigate&quot;.&#10;&#10;2. Use the fields in the bottom to &#10;manually enter the name of the &#10;stations you want to use. Hit &#10;&quot;Submit&quot; once your done. &#10;&#10;NOTE: The search page refreshes &#10;each time you attempt a new &#10;search either way. You can &#10;manually refresh all boxes by &#10;clicking &quot;File&quot; -&gt; &quot;Refresh&quot; , at &#10;the top of the window.&#10;" />
+      <Button layoutX="74.0" layoutY="346.0" mnemonicParsing="false" onAction="#close" prefHeight="22.0" prefWidth="80.0" text="OK" />
+   </children>
+</AnchorPane>

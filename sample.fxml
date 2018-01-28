@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.media.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#closeWindow" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="View">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#createTrainInfoScene" text="Train Info Page" />
+                        <MenuItem mnemonicParsing="false" text="Station Info Page" />
+                        <MenuItem mnemonicParsing="false" onAction="#createNavigateInfoScene" text="Navigate Page" />
+                  </items>
+                </Menu>
+              </menus>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </MenuBar>
+         </top>
+         <left>
+            <VBox alignment="CENTER" prefHeight="176.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+         <right>
+            <VBox alignment="CENTER" prefHeight="176.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="363.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="8.0" left="15.0" right="15.0" top="8.0" />
+               </BorderPane.margin>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <ListView fx:id="lview" blendMode="EXCLUSION" onMouseClicked="#doubleClick" prefHeight="136.0" prefWidth="311.0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </ListView>
+               </children>
+            </HBox>
+         </bottom>
+         <center>
+            <ImageView fitHeight="82.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@unnamed.png" />
+               </image>
+               <BorderPane.margin>
+                  <Insets top="5.0" />
+               </BorderPane.margin>
+            </ImageView>
+         </center>
+      </BorderPane>
+   </top>
+   <bottom>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="OkBttn" mnemonicParsing="false" onAction="#pressOk" prefHeight="25.0" prefWidth="113.0" text="OK" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Button>
+            <TextArea editable="false" maxHeight="130.0" maxWidth="400.0" prefHeight="122.0" prefWidth="400.0" text="This program represents a mini implementation of NEW YORK's MTA subway mapping. &#10;It does not include all trains lines or all train stations and most importantly is not intended as an official navigator of New York's MTA subway. &#10;The program was set up for college promotional use only. &#10;Basic information was retrieved from the MTA website. &#10;For more detailed and updated information follow the link bellow to visit MTA official Website.  " wrapText="true">
+               <opaqueInsets>
+                  <Insets left="100.0" right="100.0" />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="100.0" right="100.0" top="5.0" />
+               </VBox.margin>
+            </TextArea>
+            <Hyperlink text="www.MTA.info" />
+         </children>
+         <BorderPane.margin>
+            <Insets top="10.0" />
+         </BorderPane.margin>
+      </VBox>
+   </bottom>
+</BorderPane>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.StationInfoController">
+    <top>
+        <BorderPane fx:id="pane" prefHeight="150.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <top>
+                <MenuBar BorderPane.alignment="CENTER">
+                    <menus>
+                        <Menu mnemonicParsing="false" text="File">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#pressBack" text="Main Page" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </top>
+            <center>
+                <ImageView fitHeight="111.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                    <image>
+                        <Image url="@unnamed.png" />
+                    </image>
+                </ImageView>
+            </center>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+        </BorderPane>
+    </top>
+    <center>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+            <Button fx:id="otherB" mnemonicParsing="false" onAction="#reset" prefHeight="22.0" prefWidth="148.0" text="Choose Other Borough" />
+                <ChoiceBox fx:id="choices" prefWidth="150.0" />
+            <TextField fx:id="tf" onKeyPressed="#pressedEnter" onMouseClicked="#clickOnTf" prefHeight="22.0" prefWidth="337.0">
+               <VBox.margin>
+                  <Insets left="180.0" right="180.0" />
+               </VBox.margin>
+            </TextField>
+                <Button mnemonicParsing="false" onAction="#pressOK" prefHeight="22.0" prefWidth="105.0" text="OK" />
+                <Button mnemonicParsing="false" onAction="#pressBack" prefHeight="22.0" prefWidth="105.0" text="BACK" />
+            <VBox prefHeight="108.0" prefWidth="580.0">
+               <children>
+                  <TextArea fx:id="ta" prefHeight="87.0" prefWidth="240.0">
+                     <VBox.margin>
+                        <Insets left="180.0" right="180.0" top="20.0" />
+                     </VBox.margin>
+                  </TextArea>
+               </children>
+            </VBox>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
